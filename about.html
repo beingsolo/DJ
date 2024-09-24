@@ -5,11 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About DJ Xemmour</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F5F5F5;
+            color: #333;
+            margin: 0;
+            padding: 80px 0 0; /* Add top padding to prevent overlap */
+        }
+
+        header {
+            background-color: #000; /* Changed header background to black */
+            color: #fff;
+            padding: 10px 20px; /* Adjusted padding */
+            display: flex;
+            align-items: center; /* Align items vertically */
+            position: fixed; /* Fix the header at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Align to the top */
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        header img {
+            width: 50px; /* Set the width of the logo */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between the image and the text */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px; /* Increased gap for better spacing */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            flex-wrap: wrap; /* Allow items to wrap */
+            margin-left: auto; /* Push navigation to the right */
+        }
+
+        nav ul li a {
+            color: #fff; /* Change link color to white */
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 15px; /* Adjusted padding */
+            border-radius: 5px; /* Rounded corners for links */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        nav ul li a:hover {
+            background-color: #FBBC05; /* Change background color on hover */
+        }
+
+        .content {
+            padding: 50px; /* Add padding for content */
+            max-width: 800px; /* Limit width for better readability */
+            margin: 100px auto; /* Center the content and add top margin to prevent overlap */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        .profile-image {
+            width: 100%; /* Full width for responsiveness */
+            max-width: 300px; /* Limit max width */
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px; /* Space below the image */
+        }
+
+        .mixcloud-embed {
+            width: 100%; /* Full width for responsiveness */
+            height: 120px; /* Set height for the player */
+            margin: 20px 0; /* Add margin for spacing */
+        }
+
+        footer {
+            background-color: #202124;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative; /* Change to relative for footer */
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>DJ Xemmour</h1>
+            <h1>
+                <img src="images/logo.png" alt="DJ Xemmour's Logo"> <!-- Update the path to your logo -->
+                DJ Xemmour
+            </h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -25,7 +117,21 @@
     <section class="content">
         <div class="container">
             <h2>About DJ Xemmour</h2>
-            <p>DJ Xemmour is a rising star in the music industry, known for his electrifying mixes and captivating performances...</p>
+            <img src="path/to/profile-image.jpg" alt="DJ Xemmour" class="profile-image"> <!-- Add a profile image -->
+            <p>DJ Xemmour is a rising star in the music industry, known for his electrifying mixes and captivating performances. With a unique blend of genres, he brings a fresh sound to the dance floor.</p>
+            
+            <h3>Listen to My Mixes on Mixcloud</h3>
+            <!-- Embed multiple Mixcloud tracks -->
+            <iframe class="mixcloud-embed" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjxemmour%2Fbest-of-popular-rnb-songs-2024-by-dj-xemmour-rnb-goodies-4%2F&hide_cover=1&mini=1" frameborder="0" allow="autoplay"></iframe>
+            <iframe class="mixcloud-embed" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjxemmour%2Fragga-goodies-throwback-90s-dancehall-mixtape-by-dj-xemmour-the-unruly-king%2F&hide_cover=1&mini=1" frameborder="0" allow="autoplay"></iframe>
+            <iframe class="mixcloud-embed" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjxemmour%2Fdj-esco-ke-x-dj-xemmour-pop-chronicles-mixtape-2-ft-ed-sheeran-ariana-grande%2F&hide_cover=1&mini=1" frameborder="0" allow="autoplay"></iframe>
+            <iframe class="mixcloud-embed" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjxemmour%2Fabarntoneafrobeats-and-urban-music-mixtape2024-mixtape-by-dj-xemmour%2F&hide_cover=1&mini=1" frameborder="0" allow="autoplay"></iframe>
+            <iframe class="mixcloud-embed" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjxemmour%2Fuk-vs-kenyan-drill-mixtape-by-dj-xemmour-the-kingtion-waynewakadinali-buruklyne-boyz%2F&hide_cover=1&mini=1" frameborder="0" allow="autoplay"></iframe>
+            <iframe class="mixcloud-embed" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjxemmour%2F2022-kenyan-hits-mixtape-by-dj-xemmour-the-unruly-king%2F&hide_cover=1&mini=1" frameborder="0" allow="autoplay"></iframe>
+            <iframe class="mixcloud-embed" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjxemmour%2Fvibe-with-dj-xemmour-mixtape-5throwback-dancehall-pop-favourites%2F&hide_cover=1&mini=1" frameborder="0" allow="autoplay"></iframe>
+            <iframe class="mixcloud-embed" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjxemmour%2Fthrowback-edm-house-music-mixtape-ft-chris-brownrihannadavid-guetta-ariana-dj-xemmour%2F&hide_cover=1&mini=1" frameborder="0" allow="autoplay"></iframe>
+            <iframe class="mixcloud-embed" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjxemmour%2Fafrobeats-by-may-2024-mixtape-by-dj-xemmour-x-dj-ivan%2F&hide_cover=1&mini=1" frameborder="0" allow="autoplay"></iframe>
+            <iframe class="mixcloud-embed" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjxemmour%2Fbest-of-popular-kenyan-african-gospel-songsconnect-with-god-1dj-xemmour%2F&hide_cover=1&mini=1" frameborder="0" allow="autoplay"></iframe>
         </div>
     </section>
 
