@@ -9,46 +9,68 @@
         /* Firebase UI Inspired Styles */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #F5F5F5;
-            color: #333;
+            background-color: #000; /* Changed background to black */
+            color: #fff; /* Change text color to white for contrast */
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #4285F4;
+            background-color: #000; /* Keep header background black */
             color: #fff;
-            padding: 20px;
+            padding: 10px 20px; /* Adjusted padding */
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            align-items: center; /* Align items vertically */
+            position: fixed; /* Fix the header at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Align to the top */
+            z-index: 1000; /* Ensure it stays above other content */
         }
 
         header h1 {
             margin: 0;
             font-size: 24px;
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        header img {
+            width: 50px; /* Set the width of the profile photo */
+            height: 50px; /* Set the height of the profile photo */
+            border-radius: 50%; /* Make the image circular */
+            margin-right: 10px; /* Space between the image and the text */
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 15px;
+            gap: 15px; /* Increased gap for better spacing */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            margin-left: auto; /* Push navigation to the right */
         }
 
         nav ul li a {
-            color: #fff;
+            color: #fff; /* Change link color to white */
             font-weight: bold;
             text-transform: uppercase;
             text-decoration: none;
+            padding: 10px 15px; /* Add padding for better clickability */
+            border-radius: 5px; /* Rounded corners for links */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
         }
 
         nav ul li a:hover {
-            color: #FBBC05;
+            background-color: #FBBC05; /* Change background color on hover */
+        }
+
+        .active {
+            background-color: #FBBC05; /* Highlight active link */
         }
 
         .hero {
-            background-color: #4285F4;
-            color: #fff;
+            background-color: #000; /* Change hero background to black */
+            color: #fff; /* Ensure text is white */
             padding: 100px 0;
             text-align: center;
         }
@@ -59,7 +81,7 @@
         }
 
         .hero .btn {
-            background-color: #34A853;
+            background-color: #34A853; /* Button color */
             color: #fff;
             padding: 12px 24px;
             text-decoration: none;
@@ -67,10 +89,11 @@
             border-radius: 5px;
             display: inline-block;
             margin-top: 20px;
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
         }
 
         .hero .btn:hover {
-            background-color: #0F9D58;
+            background-color: #0F9D58; /* Change background color on hover */
         }
 
         footer {
@@ -82,24 +105,42 @@
             width: 100%;
             bottom: 0;
         }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column; /* Stack header items on small screens */
+                align-items: flex-start; /* Align items to the start */
+            }
+            nav ul {
+                flex-direction: column; /* Stack navigation links vertically */
+                width: 100%; /* Full width for navigation */
+            }
+            nav ul li {
+                margin-bottom: 10px; /* Space between links */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>DJ Xemmour</h1>
+        <h1>
+            <img src="images/logo.png" alt="DJ Xemmour's Logo"> <!-- Update the path to your logo -->
+            DJ Xemmour
+        </h1>
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="stats.html">Stats</a></li>
+                <li><a href="stats.html" class="active">Stats</a></li> <!-- Highlight active link -->
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li> <!-- Ensure the contact link is present -->
             </ul>
         </nav>
     </header>
     <section class="hero">
         <div class="container">
             <h1>Welcome to DJ Xemmour's Portfolio</h1>
-            <a href="portfolio.html" class="btn">Explore More</a>
+            <a href="stats.html" class="btn">Explore More</a>
         </div>
     </section>
     <footer>
